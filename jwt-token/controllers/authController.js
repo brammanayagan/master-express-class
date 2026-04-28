@@ -61,3 +61,9 @@ export const handleLogin = async (req, res) => {
     res.status(500).json({ error: error });
   }
 };
+
+const handleDashboard = async (req, res) => {
+  try {
+    res.status(200).json({ msg: "OK", user: req.setUser });
+  } catch (error) {}
+};
